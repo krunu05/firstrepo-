@@ -8,4 +8,6 @@
      (a) static wesite :- a website is called static website where we can not changed or update after createa website
            ex:- shiksha.com 
 
-    (b) dynamic website :- a website is called dynamic
+    (b) dynamic website :- a website is called dynamic website where we can changed or updates after create website
+           ex:-amazon flipcart 
+           

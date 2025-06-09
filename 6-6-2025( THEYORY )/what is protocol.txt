@@ -1,0 +1,6 @@
+1 what is protocol ?
+  :- protocol is set a rules in website types of protocol 
+
+    :- https ( secured )
+    :- http  ( not secured )
+    
