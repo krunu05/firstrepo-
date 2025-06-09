@@ -1,0 +1,5 @@
+1 what is github.text  
+  
+  :-github = a platform for version control and code collabration using git 
+  :- a text file that contains information or notes related to github, like repolinks ,setup steps or collabration details 
+  

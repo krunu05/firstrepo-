@@ -1,0 +1,14 @@
+1 xampp
+       
+        :- corss-platform ,apache, mysql/mariaDB ,(php) , (perl) 
+
+2 wamp 
+
+       :- windows, apache , mysql , php 
+       :-a text file assiociated with the wamp server ,often used storing settings,notes,or logs  
+
+3 lamp 
+
+       :- linux , apache , mysql , php 
+       :- a text file used in the lamp enviroment often for notes , setting, or installation details
+                   
