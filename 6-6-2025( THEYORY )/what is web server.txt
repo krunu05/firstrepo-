@@ -1,0 +1,9 @@
+what is web servers.txt
+   :- web servers stored information of users on web clouds there we used web servers
+
+      ex:- 1 google
+           2 amazon(aws)
+           3 godaddy
+           4 scalahost
+           5 hostinger
+           

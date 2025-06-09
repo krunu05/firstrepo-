@@ -1,0 +1,11 @@
+1 what is websites ? 
+    :- website is a collaction of called websites or websites is collection of informations i.e called  website informations unknown world
+
+     ex:- flipcart, amazon
+
+     type of website 
+
+     (a) static wesite :- a website is called static website where we can not changed or update after createa website
+           ex:- shiksha.com 
+
+    (b) dynamic website :- 
