@@ -8,4 +8,4 @@
      (a) static wesite :- a website is called static website where we can not changed or update after createa website
            ex:- shiksha.com 
 
-    (b) dynamic website :- 
+    (b) dynamic website :- a website is called dynamic
