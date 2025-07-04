@@ -1,3 +1,0 @@
-1 what is hypertext ?
- :- hypertext means redirect on a homepages to another page 
- 

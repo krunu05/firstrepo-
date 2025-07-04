@@ -1,7 +1,0 @@
-1 what is lan, wan and man.txt
- 
-  :-lan = local area network ( home,office)
-
-  :-wan = wide area network ( large area,cities)
-
-  :-man = metropolitan area network ( city)

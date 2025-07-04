@@ -1,6 +1,0 @@
-1 what is markup launguage ?  
- :- markup language is always enguaged with web browsers or load on web browser that's why we called html is not language it is a markup language
-
-
- 2 html structure
-       note:- html structure or html boiler or skelton of html
