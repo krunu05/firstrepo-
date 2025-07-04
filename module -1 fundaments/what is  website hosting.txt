@@ -1,0 +1,6 @@
+1 what is website hosting ?
+  :- a custom text file containing hosting info or configurations
+  :- a configuration file used used by a website 
+  :- a misnomer forr rebots .text
+   ( used for seo/ crawing perposes)
+   

@@ -1,0 +1,5 @@
+1 what is google business manager.txt ? 
+
+   :-google business manager usually refers to tools like google business profile or google workspace admin used to manage business presence on google.
+   :-  a text file that holds setup steps , notes ,or credentials related to managing a google business account profile.
+   

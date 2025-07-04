@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>reg-form </title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+    <div style="width: 50%; height: auto; margin: auto; margin-top: 3%;">
+        <h1> Registration form </h1>
+        <hr>
+        <form method="post">
+            <fieldset>
+                <legend style="text-align: center;">Requiredment </legend>
+                <input
+                type="text"
+                placeholder="Name"
+                style=" width: 200px; height: 20px;" required>
+                <br> <br>
+                <input 
+                type="text"
+                placeholder="Email"
+                style=" width: 200px; height: 20px;">
+                <br> <br>
+                <input
+                type="text"
+                placeholder="Password"
+                style=" width: 200px; height: 20px;">
+                <br> <br>
+                 <input
+                type="text"
+                placeholder="Phone"
+                style=" width: 200px; height: 20px;">
+                <br> <br>
+                male : <input
+                type="radio"
+                name="gender"
+                value="male"
+                placeholder="Phone"
+                style="width: auto; height: auto;" >
+                female : <input
+                type="radio"
+                name="gender"
+                value="female"
+                placeholder="Phone"
+                style="width: auto; height: auto;" >
+                <br> <br>
+    
+                  riding :<input type="checkbox" name="hobby" value=" riding" placeholder="Phone" style="width: auto; height: auto;">
+                    Cricket  :<input type="checkbox" name="hobby" value=" Cricket" placeholder="Phone" style="width: auto; height: auto;">
+                     Traveling :<input type="checkbox" name="hobby" value="Traveling" placeholder="Phone" style="width: auto; height: auto;">
+                     
+ <br> <BR>
+                        <select aria-placeholder="state *" style="width: 200px; height: 20px;">
+                        <option value=""> select state </option> 
+                        <option value="1"> Gujrat </option> 
+                        <option value="2">  bihar</option>
+                        <option value="3"> Utar Pradesh</option>
+                        <option value="4"> Mahrastra</option> 
+                        <option value="5"> madhya Pradesh </option>
+                      </select>
+                      <br> <BR>
+                        <select aria-placeholder="state *" style="width: 200px; height: 20px;">
+                        <option value=""> select City </option> 
+                        <option value="1"> Veraval </option> 
+                        <option value="2"> Junagadh</option>
+                        <option value="3"> Rajkot </option>
+                        <option value="4"> surat </option> 
+                        <option value="5"> baroda </option>
+                      </select>
+                      <BR> <BR>
+                        <textarea 
+                        type="text" placeholder="Address *"
+                        style="width: 300px; height: 100px;">
+                    </textarea>
+                    <br> <br>
+                    <input type="file" placeholder="photo">
+                    <br> <br>
+                    <input type="submit" value="send">
+
+                    <input type="reset" value="reset">
+                    <br> <br>
+                    <b> Already have an account ?  <A href="login.html">Login Here</A></b>
+            </fieldset>
+        </form>
+    </div>
+</body>
+</html>
