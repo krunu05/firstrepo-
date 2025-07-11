@@ -1,0 +1,96 @@
+body{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 668px;
+   
+    
+}
+
+ #cs{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+}
+
+.cs-logo {
+    width: 30%;
+    height: auto;
+    padding: 15px;
+}
+
+.cs-logo img 
+{
+    width: 50%;
+    height: auto;
+
+}
+
+.cs-nav {
+    width: 50%;
+    height: auto;
+    padding: 15px;
+
+}
+.cs-nav ul li {
+    display: inline-block;
+    padding: 0px 15px;
+
+}
+.cs-nav ul{
+    padding-left: 25%;
+    margin-top: 5%;
+}
+
+.cs-nav a {
+   
+    text-decoration: none;
+    list-style-type: none;
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    
+}
+.cs-login{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+
+}
+
+.cs-1 form{
+    width: 20%;
+    height: 200%;
+    transform: translate(1000px,50px);
+
+}
+.cs-2{
+    width: 50%;
+    height: auto;
+  padding-left: 2%;
+    
+}
+.cs-2 h1{
+    font-size: xx-large;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    transform: translate(100px,-120px);
+    color: aliceblue;
+    padding-left: 3%;
+}
+
+.cs-2 p{
+   font-size: 18px;
+    
+    transform: translate(20px,-120px);
+    color: aliceblue;
+}
+footer ul li {
+    display: inline-block;
+    padding: 15px;
+    
+transform: translate(900px,-130px);
+}
+
+ 
