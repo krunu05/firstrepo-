@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Add Product</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 600px;
+      background: white;
+      padding: 20px;
+      margin: auto;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 15px;
+    }
+
+    label {
+      font-weight: bold;
+    }
+
+    input, textarea {
+      padding: 8px;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+    }
+
+    textarea {
+      resize: vertical;
+    }
+
+    .form-buttons {
+      display: flex;
+      gap: 10px;
+    }
+
+    button {
+      padding: 10px;
+      border: none;
+      background-color: #007BFF;
+      color: white;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    button[type="reset"] {
+      background-color: #dc3545;
+    }
+
+    button:hover {
+      opacity: 0.9;
+    }
+
+    .success-message {
+      margin-top: 15px;
+      color: green;
+      font-weight: bold;
+    }
+
+    .error {
+      color: red;
+      font-size: 0.9em;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1>Add Product</h1>
+    <form id="productForm" enctype="multipart/form-data">
+      <div class="form-group">
+        <label for="productName">Product Name *</label>
+        <input type="text" id="productName" required />
+        <small class="error" id="nameError"></small>
+      </div>
+
+      <div class="form-group">
+        <label for="price">Price *</label>
+        <input type="number" id="price" required />
+        <small class="error" id="priceError"></small>
+      </div>
+
+      <div class="form-group">
+        <label for="offerPrice">Offer Price *</label>
+        <input type="number" id="offerPrice" required />
+      </div>
+
+      <div class="form-group">
+        <label for="qty">Quantity *</label>
+        <input type="number" id="qty" required />
+      </div>
+
+      <div class="form-group">
+        <label for="description">Description *</label>
+        <textarea id="description" required></textarea>
+      </div>
+
+      <div class="form-group">
+        <label for="photo">Product Photo *</label>
+        <input type="file" id="photo" accept="image/png, image/jpeg" required />
+        <small class="error" id="photoError"></small>
+      </div>
+
+      <div class="form-buttons">
+        <button type="submit">Submit</button>
+        <button type="reset">Reset</button>
+      </div>
+
+      <div id="successMessage" class="success-message"></div>
+    </form>
+  </div>
+
+  <!-- ✅ Embedded JavaScript -->
+  <script>
+    document.getElementById("productForm").addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      // Clear previous error messages
+      document.getElementById("nameError").textContent = "";
+      document.getElementById("priceError").textContent = "";
+      document.getElementById("photoError").textContent = "";
+      document.getElementById("successMessage").textContent = "";
+
+      // Form fields
+      const name = document.getElementById("productName").value.trim();
+      const price = document.getElementById("price").value.trim();
+      const offerPrice = document.getElementById("offerPrice").value.trim();
+      const qty = document.getElementById("qty").value.trim();
+      const desc = document.getElementById("description").value.trim();
+      const photo = document.getElementById("photo").files[0];
+
+      let isValid = true;
+
+      // Validate product name
+      if (name === "") {
+        document.getElementById("nameError").textContent = "Product name is required.";
+        isValid = false;
+      }
+
+      // Validate price format
+      if (!/^\d+(\.\d{1,2})?$/.test(price)) {
+        document.getElementById("priceError").textContent = "Enter valid price (e.g., 99.99).";
+        isValid = false;
+      }
+
+      // Validate image file
+      if (!photo) {
+        document.getElementById("photoError").textContent = "Please upload a product photo.";
+        isValid = false;
+      } else {
+        const validTypes = ["image/jpeg", "image/png", "image/jpg"];
+        if (!validTypes.includes(photo.type)) {
+          document.getElementById("photoError").textContent = "Allowed formats: jpg, jpeg, png.";
+          isValid = false;
+        } else if (photo.size > 250 * 1024) {
+          document.getElementById("photoError").textContent = "File must be under 250 KB.";
+          isValid = false;
+        }
+      }
+
+      // If form is valid, save to localStorage
+      if (isValid) {
+        const reader = new FileReader();
+
+        reader.onload = function () {
+          const photoBase64 = reader.result;
+
+          const product = {
+            productName: name,
+            price: parseFloat(price).toFixed(2),
+            offerPrice: parseFloat(offerPrice).toFixed(2),
+            qty: parseInt(qty),
+            description: desc,
+            photo: photoBase64,
+            added_date: new Date().toLocaleString()
+          };
+
+          // Save to localStorage
+          let products = JSON.parse(localStorage.getItem("products")) || [];
+          products.push(product);
+          localStorage.setItem("products", JSON.stringify(products));
+
+          document.getElementById("successMessage").textContent = "Product added successfully!";
+          document.getElementById("productForm").reset();
+        };
+
+        reader.readAsDataURL(photo);
+      }
+    });
+  </script>
+</body>
+</html>
